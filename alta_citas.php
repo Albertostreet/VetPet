@@ -23,6 +23,7 @@
                     if(data === "0"){
                         $("#insertado").show();
                         setTimeout(insertado,5000);
+                        
                     }
                 })
             }
@@ -44,22 +45,18 @@
     <?php require_once 'menuCitas.php'; ?>
     <div class="Forma">
         
-        <div class="form">
-            <div>
-                <label for="cliente">Cliente:</label>
-                <input type="text" name="cliente" id="cliente">
-            </div><br>
-            <div>
-                <label for="mascota">Mascota:</label>
-                <input type="text" name="mascota" id="mascota">
-            </div><br>
-            <div>   
-                <label for="fecha">Fecha Deseada:</label>
-                <input type="date" name="fecha" id="fecha">
-            </div><br>
-            <div>
-                <input type="button" onclick="Enviar();" value="Enviar">
-            </div><br>
+        <div class="FormaAltaCitas">
+            <label for="cliente">Cliente:</label>
+            <input type="text" name="cliente" id="cliente">
+            <br>
+            <label for="mascota">Mascota:</label>
+            <input type="text" name="mascota" id="mascota">
+            <br>
+            <label for="fecha">Fecha Deseada:</label>
+            <input type="date" name="fecha" id="fecha">
+            <br>
+            <input type="button" onclick="Enviar();" value="Enviar">
+            <br>
             <div id="msg" style="display: none;">Faltan campos por llenar</div>
             <div id="insertado" style="display: none;">Insertado con exito</div>
         </div>

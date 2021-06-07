@@ -1,7 +1,8 @@
-<?php 
+<?php
+    $cliente = $_POST['cliente'];
     require_once 'conecta.php';
 
-    $sql = "SELECT * FROM citas";
+    $sql = "SELECT * FROM citas WHERE cliente='$cliente'";
 
     $respuesta = mysqli_query($conecta, $sql);
 
@@ -12,12 +13,10 @@
             "<td>". $fila['cliente'] ."</td>",
             "<td>". $fila['mascota'] ."</td>",
             "<td>". $fila['fecha'] ."</td>",
-            "<td><input type=". '"button"' ." onClick=".'"Editar('.$fila['id'].');"'." value=".'"Editar"'."></td>",
             "<td><input type=". '"button"' ." onClick=".'"Eliminar('.$fila['id'].');"'." value=".'"Eliminar"'."></td>",
             "</tr>";
         }
     }else{
-        echo "<tr></tr>";
+        echo "1";
     }
-    
 ?>
