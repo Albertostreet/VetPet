@@ -31,36 +31,47 @@
         }
         
     </script>
+    <style>
+        .Forma{
+            background: url('fondo.jpg') no-repeat bottom right fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <?php require_once 'navBar.html'; ?>
-    
-    <div id="container">
-        
-        <form name="form01" action="addClient.php" method="POST">
-            <h2>Agregar Cliente</h2>
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
-            </div>
-            <div>
-                <label for="direccion">Direccion:</label>
-                <input type="text" name="direccion" id="direccion">
-            </div>
-            <div>
-                <label for="correo">Correo:</label>
-                <input type="text" name="correo" id="correo">
-            </div>
-            <div>   
-                <label for="telefono">Telefono:</label>
-                <input type="date" name="telefono" id="telefono">
-            </div>
-            <div>
-                <input type="submit" onclick="Enviar();" value="Enviar">
-            </div>
+    <div class="Forma">
+        <div id="container">
+            
+            <form name="form01" action="backend/addClient.php" method="POST">
+                <h2>Agregar Cliente</h2>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div>
+                    <label for="direccion">Direccion:</label>
+                    <input type="text" name="direccion" id="direccion">
+                </div>
+                <div>
+                    <label for="correo">Correo:</label>
+                    <input type="text" name="correo" id="correo">
+                </div>
+                <div>   
+                    <label for="telefono">Telefono:</label>
+                    <input type="text" name="telefono" id="telefono">
+                </div>
+                <div>
+                    <input type="submit" onclick="Enviar();" value="Enviar">
+                </div>
 
-            <div id="msg" style="display: none;">Faltan campos por llenar</div>
-    </form>
+                <div id="msg" style="display: none;">Faltan campos por llenar</div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
