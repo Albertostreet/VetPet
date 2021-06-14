@@ -58,26 +58,46 @@
     <?php require_once 'menu.php'; ?>
     <?php require_once 'menuCitas.php'; ?>
     <div class="Forma">
-        <div class="FormaAltaCitas">
-            <div id="inputs" class="divInputs">
+    <img src="img/fondocitas2.jpg" class="img">
+        <div class="FormaCitas">
+            <div>
+                <div id="inputs" class="divInputs">
+                    <div>
+                    <div>Selecciona "Editar" en las opciones de la cita para comenzar</div>
+                    <div>
+                        <label for="">Cliente:</label><br>
+                        <input type="text" name="" id="" readonly>
+                    </div><br>
+                    <div>
+                        <label for="">Mascota:</label><br>
+                        <input type="text" name="" id="" readonly>
+                        </div><br>
+                    <div>
+                        <label for="">Fecha Deseada:</label><br>
+                        <input type="date" name="" id="" readonly>
+                    </div><br>
+                    </div>
+                </div>
+                <div>
+                    <label for="cliente">Ingresa el nombre del cliente y da click para buscar las citas de ese cliente</label>
+                    <input type="text" name="cliente" id="cliente" oninput="Buscar();">
+                </div>
+                
+                <div id="modificado" style="display: none;">Modificado con exito</div>
             </div>
             <div>
-                <label for="cliente">Ingresa el nombre del cliente y da click para buscar las citas de ese cliente</label>
-                <input type="text" name="cliente" id="cliente" >
-                <input type="button" onclick="Buscar();" value="Buscar">
+                <Table>
+                    <tr>
+                        <td>ID</td>
+                        <td>CLIENTE</td>
+                        <td>MASCOTA</td>
+                        <td>FECHA</td>
+                        <td>EDITAR</td>
+                    </tr>
+                </Table>
+                <table id="tabla">
+                </table>
             </div>
-            <Table>
-                <tr>
-                    <th>ID</th>
-                    <th>CLIENTE</th>
-                    <th>MASCOTA</th>
-                    <th>FECHA</th>
-                    <th>EDITAR</th>
-                </tr>
-            </Table>
-            <table id="tabla">
-            </table>
-            <div id="modificado" style="display: none;">Modificado con exito</div>
         </div>
     </div>
 </body>

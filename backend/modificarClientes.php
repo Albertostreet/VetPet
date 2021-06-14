@@ -1,15 +1,17 @@
 <?php
+    $id = $_POST['id'];
     $nombre = $_POST['nombre'];
-    $raza = $_POST['raza'];
-    $color = $_POST['color'];
-    $edad = $_POST['edad'];
+    $direccion = $_POST['direccion'];
+    $correo = $_POST['correo'];
+    $telefono = $_POST['telefono'];
     require_once 'conecta.php';
 
-    $sql = "SELECT * FROM `mascotas` WHERE `nombre`!='$nombre' AND `edad`!=$edad";
+    $sql = "SELECT * FROM `clientes` WHERE `nombre`!='$nombre' AND `telefono`!=$telefono";
 
     if($respuesta = mysqli_query($conecta, $sql)){
         if(mysqli_num_rows($respuesta) < 1){
-            $sql1 = "INSERT INTO `mascotas`( `nombre`, `raza`, `color`, `edad`) VALUES ('$nombre','$raza','$color', $edad)";
+            $sql1 = "UPDATE `clientes` 
+            SET `nombre`='$nombre',`direccion`='$direccion',`correo`='$correo',`telefono`='$telefono' WHERE id=$id";
 
             if($respuesta1 = mysqli_query($conecta, $sql1)){
                 echo "0";
@@ -22,7 +24,5 @@
     }else{
         echo "3";
     }
-
-    
 
 ?>

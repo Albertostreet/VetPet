@@ -6,33 +6,51 @@
         width: 100%;
         height: 100%;
     }
-    .FormaAltaCitas{
+    .FormaCitas{
         position: fixed;
-        top: 35%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 50%;
-        height: 330px;
-        
+        height: 70%;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 14px 15px 5px 0px rgba(0,0,0,0.75);
     }
     .divInputs{
-        height: 300px;
-        margin-left: 30%;
+        height: 370px;
+        width: 550px;
+        margin-left: 20%;
+    }
+    .citasDiv{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
     }
     body{
         background-color:cornflowerblue;
         margin: 0px;
     }
-    table, tr, th, td{
-        border: 1px solid #0090FE;
+    table, tr, td{
+        background-color: white;
+        width: 960px;
     }
-    th, td{
+    td{
         width: 150px;
     }
-    input, label, div{
+    input, label, div, button{
         color: black;
         font-size: 25px;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        border-radius: 25px;
+        border-color: #F2A422;
+    }
+    button{
+        background-color: white;
+        border-radius: 12px;
     }
     .menu{
         width: 100%;
@@ -71,5 +89,18 @@
         border: 1px solid #0090FE;
         width: 150px;
         height: 150px;
+    }
+    .FormaCalendario{
+        position: fixed;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 51%;
+        height: 82%;
+        background-color: white;
+    }
+    .img{
+        width: 100%;
+        height: 100%;
     }
     </style>

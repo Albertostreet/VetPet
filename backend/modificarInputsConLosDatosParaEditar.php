@@ -10,18 +10,18 @@
         while($fila = mysqli_fetch_assoc($respuesta)){
             echo "<div>",
             "<div>Ingresa los nuevos datos y da click en el boton 'Enviar Cambios' para registrar los cambios</div>",
-            "<label for=".'"cliente"'.">Cliente:</label>",
+            "<label for=".'"cliente"'.">Cliente:</label><br>",
             "<input type=".'"text"'." name=".'"cliente"'." id=".'"cliente"'." value=".'"'.$fila['cliente'].'"'." >",
             "</div><br>",
             "<div>",
-                "<label for=".'"mascota"'.">Mascota:</label>",
+                "<label for=".'"mascota"'.">Mascota:</label><br>",
                 "<input type=".'"text"'." name=".'"mascota"'." id=".'"mascota"'." value=".$fila['mascota'].">",
             "</div><br>",
             "<div>",   
-                "<label for=".'"fecha"'.">Fecha Deseada:</label>",
+                "<label for=".'"fecha"'.">Fecha Deseada:</label><br>",
                 "<input type=".'"date"'." name=".'"fecha"'." id=".'"fecha"'." value=".$fila['fecha'].">",
             "</div><br>",
-            "<div><input type=".'"submit"'." value=".'"Enviar Cambios"'." onClick=".'"Enviar('.$fila['id'].');"'."></div>";
+            "<div><button onClick=".'"Enviar('.$fila['id'].');"'.">Enviar</button></div>";
         }
     }else{
         echo "1";

@@ -36,22 +36,24 @@
     <?php require_once 'menu.php'; ?>
     <?php require_once 'menuCitas.php'; ?>
     <div class="Forma">
-        <div class="FormaAltaCitas">
-            <label for="cliente">Ingresa el nombre del cliente y da click para buscar las citas de ese cliente</label>
-            <input type="text" name="cliente" id="cliente">
-            <input type="button" onclick="Buscar();" value="Buscar">
-            <Table>
-                <tr>
-                    <th>ID</th>
-                    <th>CLIENTE</th>
-                    <th>MASCOTA</th>
-                    <th>FECHA</th>
-                    <th>ELIMINAR</th>
-                </tr>
-            </Table>
-            <table id="tabla">
-            </table>
-            <div id="eliminado" style="display: none;">Eliminado con exito</div>
+    <img src="img/fondocitas2.jpg" class="img">
+        <div class="FormaCitas">
+            <div>
+                <label for="cliente">Ingresa el nombre del cliente y da click para buscar las citas de ese cliente</label>
+                <input type="text" name="cliente" id="cliente" oninput="Buscar();">
+                <Table>
+                    <tr>
+                        <td>ID</td>
+                        <td>CLIENTE</td>
+                        <td>MASCOTA</td>
+                        <td>FECHA</td>
+                        <td>ELIMINAR</td>
+                    </tr>
+                </Table>
+                <table id="tabla">
+                </table>
+                <div id="eliminado" style="display: none;">Eliminado con exito</div>
+            </div>
         </div>
     </div>
 </body>

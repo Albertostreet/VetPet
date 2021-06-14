@@ -13,7 +13,7 @@
             "<td>". $fila['cliente'] ."</td>",
             "<td>". $fila['mascota'] ."</td>",
             "<td>". $fila['fecha'] ."</td>",
-            "<td><input type=". '"button"' ." onClick=".'"Eliminar('.$fila['id'].');"'." value=".'"Eliminar"'."></td>",
+            "<td><button onclick=".'"Eliminar('.$fila['id'].');"'.">Eliminar</button></td>",
             "</tr>";
         }
     }else{

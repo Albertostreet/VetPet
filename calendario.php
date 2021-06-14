@@ -12,7 +12,8 @@
 <?php require_once 'menu.php'; ?>
     <?php require_once 'menuCitas.php'; ?>
     <div class="Forma">
-        <div class="FormaAltaCitas">
+    <img src="img/fondocitas2.jpg" class="img">
+        <div class="FormaCalendario">
             <div class="calendario1">
                 <div class="calendario">
                     Sabado 30/5/2021

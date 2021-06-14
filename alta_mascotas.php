@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta de citas</title>
+    <title>Alta de mascotas</title>
     <?php require_once 'styles.php'; ?>
     
     <script>
         function Enviar(){
-            var cliente = $("#cliente").val();
-            var mascota = $("#mascota").val();
-            var fecha = $("#fecha").val();
+            var nombre = $("#nombre").val();
+            var raza = $("#raza").val();
+            var color = $("#color").val();
+            var edad = $("#edad").val();
             
             
-            if(cliente !== "" && mascota !== "" && fecha !== ""){
-                $.post('backend/altaCita.php', 
-                {cliente: cliente,
-                mascota: mascota,
-                fecha: fecha},
+            if(nombre !== "" && raza !== "" && color !== "" && edad > -1){
+                $.post('backend/altaMascotas.php', 
+                {nombre: nombre,
+                raza: raza,
+                color: color,
+                edad: edad},
                 function(data){
                     if(data === "0"){
                         $("#insertado").show();
@@ -48,22 +50,25 @@
 </head>
 <body>
     <?php require_once 'menu.php'; ?>
-    <?php require_once 'menuCitas.php'; ?>
+    <?php require_once 'menuMascotas.php'; ?>
     <div class="Forma">
     <img src="img/fondocitas2.jpg" class="img">
         <div class="FormaCitas">
             <div class="citasDiv">
-                <div>Ingresa los datos del cliente, mascota y la fecha deseada para la cita</div><br>
-                <div>Al finalizar da click en enviar para registrar la cita</div>
+                <div>Ingresa los datos de la mascota</div><br>
+                <div>Al finalizar da click en enviar para registrar la mascota</div>
                 <br>
-                <label for="cliente">Cliente:</label><br>
-                <input type="text" name="cliente" id="cliente"><br>
+                <label for="nombre">Nombre de la mascota:</label><br>
+                <input type="text" name="nombre" id="nombre"><br>
                 <br>
-                <label for="mascota">Mascota:</label><br>
-                <input type="text" name="mascota" id="mascota"><br>
+                <label for="raza">Raza:</label><br>
+                <input type="text" name="raza" id="raza"><br>
                 <br>
-                <label for="fecha">Fecha Deseada:</label><br>
-                <input type="date" name="fecha" id="fecha"><br>
+                <label for="color">Color:</label><br>
+                <input type="text" name="color" id="color"><br>
+                <br>
+                <label for="edad">Edad:</label><br>
+                <input type="number" name="edad" id="edad"><br>
                 <br>
                 <input type="button" onclick="Enviar();" value="Enviar">
                 <br>
