@@ -22,14 +22,16 @@
                 function(data){
                     if(data === "0"){
                         $("#insertado").show();
-                        setTimeout(insertado,5000);
+                        setTimeout(insertado,2000);
                         
                     }else if(data === "1"){
                         console.log("Error en el query 2");
                     }else if(data === "2"){
-                        console.log("Ya existe");
-                    }else if(data === "3"){
-                        console.log("Error en el query");
+                        $("#msg2").show();
+                        setTimeout(existe,2000);
+                    }else{
+                        $("#msg3").show();
+                        setTimeout(error,2000);
                     }
                 })
             }
@@ -43,6 +45,13 @@
         }
         function insertado(){
             $("#insertado").hide();
+            window.location.replace("lista_citas.php");
+        }
+        function existe(){
+            $("#msg2").hide();
+        }
+        function error(){
+            $("#msg3").hide();
         }
     </script>
 </head>
@@ -69,6 +78,8 @@
                 <br>
                 <div id="msg" style="display: none;">Faltan campos por llenar</div>
                 <div id="insertado" style="display: none;">Insertado con exito</div>
+                <div id="msg2" style="display: none;">Ya existe una cita con este cliente y fecha</div>
+                <div id="msg3" style="display: none;">No existe este cliente o mascota en los registros</div>
             </div>
         </div>
     </div>

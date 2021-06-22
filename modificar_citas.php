@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div>
-                    <label for="cliente">Ingresa el nombre del cliente y da click para buscar las citas de ese cliente</label>
+                    <label for="cliente">Ingresa el nombre del cliente para buscar las citas de ese cliente</label>
                     <input type="text" name="cliente" id="cliente" oninput="Buscar();">
                 </div>
                 

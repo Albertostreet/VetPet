@@ -6,7 +6,7 @@
     $telefono = $_POST['telefono'];
     require_once 'conecta.php';
 
-    $sql = "SELECT * FROM `clientes` WHERE `nombre`!='$nombre' AND `telefono`!=$telefono";
+    $sql = "SELECT * FROM `clientes` WHERE `nombre`='$nombre' AND `telefono`=$telefono AND `id`!=$id";
 
     if($respuesta = mysqli_query($conecta, $sql)){
         if(mysqli_num_rows($respuesta) < 1){

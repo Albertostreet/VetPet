@@ -34,8 +34,8 @@
                 },
                 function(data){
                     if(data !== "1"){
-                        $("#modificado").show();
-                        setTimeout(modificado,3000);
+                        $("#msg").show();
+                        setTimeout(modificado,1000);
                     }
                 });
             }
@@ -54,6 +54,10 @@
             $("#eliminado").hide();
             location.reload();
         }
+        function modificado(){
+            $("#msg").hide();
+            location.reload();
+        }
     </script>
 </head>
 <body>
@@ -67,11 +71,11 @@
                     <div>Selecciona "Editar" en las opciones de la cita para comenzar</div>
                     <div>
                         <label for="">Cliente:</label><br>
-                        <input type="text" name="" id="" readonly>
+                        <input type="text" name="cliente" id="cliente" readonly>
                     </div><br>
                     <div>
                         <label for="">Mascota:</label><br>
-                        <input type="text" name="" id="" readonly>
+                        <input type="text" name="mascota" id="mascota" readonly>
                         </div><br>
                     <div>
                         <label for="">Fecha Deseada:</label><br>
@@ -92,6 +96,7 @@
                 </tr>
             </table>
             <div id="eliminado" style="display: none;">Eliminado con exito</div>
+            <div id="msg" style="display: none;">Registrado</div>
         </div>
     </div>
 </body>

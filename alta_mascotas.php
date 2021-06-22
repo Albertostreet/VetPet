@@ -29,7 +29,8 @@
                     }else if(data === "1"){
                         console.log("Error en el query 2");
                     }else if(data === "2"){
-                        console.log("Ya existe");
+                        $("#msg1").show();
+                        setTimeout(existe,2000);
                     }else if(data === "3"){
                         console.log("Error en el query");
                     }
@@ -45,6 +46,9 @@
         }
         function insertado(){
             $("#insertado").hide();
+        }
+        function existe(){
+            $("#msg1").hide();
         }
     </script>
 </head>
@@ -74,6 +78,7 @@
                 <br>
                 <div id="msg" style="display: none;">Faltan campos por llenar</div>
                 <div id="insertado" style="display: none;">Insertado con exito</div>
+                <div id="msg1" style="display: none;">Ya existe este registro</div>
             </div>
         </div>
     </div>
